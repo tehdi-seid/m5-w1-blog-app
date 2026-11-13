@@ -24,7 +24,7 @@ function PostCard({ post }: { post: Post }) {
       </div>
       <Link
         className="text-blue-500 capitalize relative hover:left-2 transition-all duration-300 ease-in text-right"
-        to={`/posts/:${post.slug}`}
+        to={`/posts/${post.slug}`}
       >
         read article →
       </Link>

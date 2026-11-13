@@ -35,7 +35,7 @@ function HomePage() {
         </Link>
       </div>
       <div className="mt-10">
-        <div className="flex justify-between mb-8">
+        <div className="flex justify-between mb-8 items-center">
           <h1 className="text-2xl font-semibold hover:underline hover:text-[hsl(242,100%,80%)]">
             latest articles
           </h1>
