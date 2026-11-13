@@ -1,0 +1,109 @@
+[{
+  "title": "How HTTP and HTTPS Work",
+  "slug": "how-http-and-https-work",
+  "excerpt": "Learn how browsers and servers communicate and why HTTPS protects data in transit.",
+  "body": "HTTP is the protocol used for transferring web resources between clients and servers. HTTPS is HTTP protected by TLS, which helps provide encryption, integrity, and server authentication. Without encryption, information sent over an unprotected connection may be exposed or altered by an attacker on the network. HTTPS is essential for modern websites, especially when users sign in or submit personal information. A browser's secure connection indicator means the connection is protected, not that every piece of content on the website is trustworthy.",
+  "publishedAt": "2026-10-01",
+  "tags": [
+    "web",
+    "security",
+    "networking"
+  ]
+},
+  {
+    "slug": "git-branches-explained",
+    "title": "Git Branches Explained",
+    "excerpt": "Understand how branches let developers work on features without changing the main line of development.",
+    "body": "A Git branch is a movable pointer to a commit. Developers use branches to work on features, fixes, or experiments independently. A feature branch lets you make and test changes without immediately changing main. When the work is ready, you can open a pull request, discuss the changes, run checks, and merge them. Branches are lightweight, so creating one is a normal part of a healthy development workflow. Give branches descriptive names such as feature/blog-search or fix/mobile-navigation.",
+    "publishedAt": "2026-09-29",
+    "tags": [
+      "git",
+      "github",
+      "workflow"
+    ]
+  },
+  {
+    "slug": "git-pull-vs-fetch",
+    "title": "Git Fetch vs Git Pull",
+    "excerpt": "Learn the difference between downloading remote updates and integrating them into your current branch.",
+    "body": "git fetch downloads information and commits from a remote repository without automatically changing your current branch. It lets you inspect what has changed before integrating those updates. git pull generally performs a fetch followed by an integration step, commonly a merge or rebase depending on configuration. Fetch is useful when you want to review remote changes first. Pull is convenient when you are ready to update your current branch. Understanding the distinction helps prevent surprises when collaborating.",
+    "publishedAt": "2026-09-27",
+    "tags": [
+      "git",
+      "github",
+      "workflow"
+    ]
+  },
+  {
+    "slug": "writing-a-good-pull-request",
+    "title": "Writing a Good Pull Request",
+    "excerpt": "Make code reviews easier with a clear summary, motivation, and testing instructions.",
+    "body": "A pull request proposes a set of changes for review before they are merged. A useful description explains what changed, why the change was needed, and how someone can test it. Keep the scope focused so reviewers can understand the work. Include screenshots when visual changes matter, and mention any known limitations. Before requesting review, check that the branch is up to date and that relevant linting, type checks, and tests pass. Good pull requests improve communication as much as they improve code quality.",
+    "publishedAt": "2026-09-25",
+    "tags": [
+      "git",
+      "github",
+      "workflow"
+    ]
+  },
+  {
+    "slug": "what-is-vite",
+    "title": "What Is Vite?",
+    "excerpt": "Find out how Vite supports a fast development workflow for modern frontend projects.",
+    "body": "Vite is a frontend build tool that provides a development server and a production build process. During development, it serves source files in a way that supports fast startup and quick updates. When you are ready to deploy, Vite builds optimized assets for production. It works with frameworks such as React and supports TypeScript and many plugins. A Vite project is configured through files such as package.json and vite.config.ts. Understanding the difference between the development server and production build helps when debugging deployment issues.",
+    "publishedAt": "2026-09-23",
+    "tags": [
+      "vite",
+      "tooling",
+      "frontend"
+    ]
+  },
+  {
+    "slug": "deploying-react-to-vercel",
+    "title": "Deploying a React App to Vercel",
+    "excerpt": "Learn the basic steps for connecting a Git repository and publishing a frontend application.",
+    "body": "Deployment makes your application available on the internet. A common workflow is to push your project to GitHub, import the repository into Vercel, configure the build settings, and deploy. Vercel can create new deployments when changes are pushed to the connected branch. Single-page applications also need appropriate rewrite rules so direct visits to nested routes are served by the application. After deployment, test the homepage, a nested route, a refresh on that route, and the mobile layout.",
+    "publishedAt": "2026-09-21",
+    "tags": [
+      "vercel",
+      "deployment",
+      "react"
+    ]
+  },
+  {
+    "slug": "accessibility-for-beginners",
+    "title": "Web Accessibility for Beginners",
+    "excerpt": "Build interfaces that more people can use with semantic HTML, labels, keyboard support, and contrast.",
+    "body": "Accessibility means designing and building websites so people with different abilities can use them. Start with semantic HTML: use buttons for actions, links for navigation, headings in a logical order, and labels for form controls. Make sure interactive elements work with a keyboard and show a visible focus indicator. Provide meaningful alternative text for informative images and maintain sufficient color contrast. ARIA attributes can add information when native HTML is not enough, but they should not replace semantic elements.",
+    "publishedAt": "2026-09-19",
+    "tags": [
+      "accessibility",
+      "html",
+      "frontend"
+    ]
+  },
+  {
+    "slug": "semantic-html",
+    "title": "Why Semantic HTML Matters",
+    "excerpt": "Use elements that describe the meaning and structure of your content rather than choosing tags only for appearance.",
+    "body": "Semantic HTML uses elements that communicate the purpose of content. A nav element identifies navigation, main identifies the primary content, article represents a self-contained composition, and footer represents footer content. These elements help browsers, assistive technologies, search engines, and other developers understand a page. Semantic elements do not automatically make a site accessible, but they provide a strong foundation. Choose elements based on meaning, then use CSS to control their appearance.",
+    "publishedAt": "2026-09-17",
+    "tags": [
+      "html",
+      "accessibility",
+      "web"
+    ]
+  },
+  {
+    "slug": "forms-in-react",
+    "title": "Working with Forms in React",
+    "excerpt": "Understand form state, controlled inputs, submit handlers, and basic validation.",
+    "body": "Forms collect information from users. In React, a controlled input receives its value from state and updates that state through an onChange handler. This gives the component control over the current form values. When the form is submitted, handle the submit event and prevent the browser's default page navigation when appropriate. Validate the values before processing them and show helpful messages near the relevant fields. For larger forms, libraries can help organize registration, validation, and submission.",
+    "publishedAt": "2026-09-15",
+    "tags": [
+      "react",
+      "forms",
+      "javascript"
+    ]
+  }
+]
