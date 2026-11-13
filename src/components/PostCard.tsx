@@ -1,16 +1,26 @@
 import React from "react";
-import { posts } from "../data/posts";
+import { posts, type Post } from "../data/posts";
 import { Link } from "react-router";
-function PostCard() {
-  const post = posts[0];
-  console.log(post);
+import { MdOutlineDateRange } from "react-icons/md";
+
+function PostCard({ post }: { post: Post }) {
   return (
-    <div className="border border-gray-900 hover:border-gray-700 w-100 hover:shadow-2xl hover:shadow-gray-900 p-5 flex flex-col gap-3 hover:scale-102 transition-all duration-300 ease-in">
-      <p>{post.publishedAt}</p>
+    <div className="border border-gray-900 hover:border-gray-700 hover:shadow-2xl hover:shadow-gray-900 p-5 flex flex-col gap-3 hover:scale-102 transition-all duration-300 ease-in">
+      <p className="flex items-center gap-0.5">
+        <MdOutlineDateRange />
+        {post.publishedAt}
+      </p>
       <h2 className="text-2xl font-semibold text-gray-200">{post.title}</h2>
       <p>{post.excerpt}</p>
+      <div className="flex gap-2">
+        {post.tags.map((tag) => (
+          <p className="border px-1.5 py-0.5 border-gray-700 bg-gray-800">
+            #{tag}
+          </p>
+        ))}
+      </div>
       <Link
-        className="text-blue-500 capitalize relative hover:left-2 transition-all duration-300 ease-in"
+        className="text-blue-500 capitalize relative hover:left-2 transition-all duration-300 ease-in text-right"
         to={`/posts/:${post.slug}`}
       >
         read article →
