@@ -5,7 +5,7 @@ import PostCard from "../components/PostCard";
 function HomePage() {
   const latest_posts = posts.slice(1, 5);
   return (
-    <section className="mt-20 relative">
+    <section className="mt-20 relative mx-[5%] ">
       <div className="relative flex flex-col gap-20 items-center">
         <h1 className="text-6xl font-bold text-[hsla(242,100%,70%)]">
           Learn Build Grow
@@ -35,7 +35,7 @@ function HomePage() {
         </Link>
       </div>
       <div>
-        <h1 className="text-2xl font-semibold my-4 hover:underline hover:text-[hsl(242,100%,80%)] w-max cursor-pointer">
+        <h1 className="text-2xl font-semibold my-4 hover:underline hover:text-[hsl(242,100%,80%)] w-max cursor-pointer my-10">
           latest articles
         </h1>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(380px,100%),1fr))] gap-5">
