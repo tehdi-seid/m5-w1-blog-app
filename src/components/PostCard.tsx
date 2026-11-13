@@ -14,7 +14,10 @@ function PostCard({ post }: { post: Post }) {
       <p>{post.excerpt}</p>
       <div className="flex gap-2">
         {post.tags.map((tag) => (
-          <p className="border px-1.5 py-0.5 border-gray-700 bg-gray-800">
+          <p
+            key={tag}
+            className="border px-1.5 py-0.5 border-gray-700 bg-gray-800"
+          >
             #{tag}
           </p>
         ))}

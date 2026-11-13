@@ -9,7 +9,7 @@ function Posts() {
       <h1 className="text-2xl font-semibold text-center py-3 ">Posts</h1>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(380px,100%),1fr))] gap-5">
         {post.map((post) => (
-          <PostCard post={post} />
+          <PostCard key={post.slug} post={post} />
         ))}
       </div>
     </div>
