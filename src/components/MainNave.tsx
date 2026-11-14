@@ -1,16 +1,37 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 function MainNave() {
   return (
     <header className="flex justify-between py-3 shadow-sm mx-[5%] ">
-      <Link className="text-2xl font-bold" to="/">
+      <NavLink className="text-2xl font-bold" to="/">
         blog
-      </Link>
+      </NavLink>
       <nav>
         <ul className="flex gap-6 text-lg">
-          <Link to="/">home</Link>
-          <Link to="/posts">posts</Link>
-          <Link to="/about">about</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "text-gray-50"
+            }
+            to="/"
+          >
+            home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "text-gray-50"
+            }
+            to="/posts"
+          >
+            posts
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "text-gray-50"
+            }
+            to="/about"
+          >
+            about
+          </NavLink>
         </ul>
       </nav>
     </header>

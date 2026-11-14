@@ -18,7 +18,7 @@ function HomePage() {
       </div>
 
       <div>
-        <div className="bg-radial from-gray-400 blur-3xl to-transparent absolute w-full h-30 top-0 opacity-50"></div>
+        <div className="bg-radial -z-10 from-gray-400 blur-3xl to-transparent absolute w-full h-30 top-0 opacity-50"></div>
       </div>
       <div className="mt-20 flex justify-center gap-10">
         <Link

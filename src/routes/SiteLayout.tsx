@@ -11,7 +11,7 @@ function SiteLayout() {
     <div>
       <ScrollTop />
       <MainNave />
-      <main>
+      <main className="animate-page-enter">
         <Outlet />
       </main>
       {!pathname.startsWith("/posts/") && <Footer />}

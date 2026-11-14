@@ -13,17 +13,18 @@ function PostsDetail() {
   const params = useParams();
   const post_to_be_detailed = find_post(params.slug);
   return (
-    <article className="border">
-      <div>
+    <div className="w-full h-screen flex justify-center items-center bg-gray-950">
+      <article className="border">
         <div>
-          <p>
-            <LuClock />
+          <div>
+            <p>
+              <LuClock />
+            </p>
             <p>{post_to_be_detailed?.publishedAt}</p>
-          </p>
+          </div>
         </div>
-        <div>time 1m</div>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }
 
