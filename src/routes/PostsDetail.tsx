@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { SlInfo } from "react-icons/sl";
+import { MdContentCopy } from "react-icons/md";
+import { IoArrowBackOutline } from "react-icons/io5";
 import { useParams } from "react-router";
 import { posts } from "../data/posts";
 import { LuClock } from "react-icons/lu";
@@ -26,7 +28,7 @@ function PostsDetail() {
   }
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gray-950">
-      <article className="border max-w-[min(100%,700px)] p-5 flex flex-col gap-4">
+      <article className="border max-w-[min(100%,800px)] p-7 flex flex-col gap-4">
         <div className="flex items-center justify-end gap-2">
           <p>
             <LuClock />
@@ -35,7 +37,7 @@ function PostsDetail() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h5 className="text-3xl font-semibold">
+          <h5 className="text-3xl font-semibold text-gray-300">
             {post_to_be_detailed?.excerpt}
           </h5>
           <div className="flex gap-5">
@@ -51,11 +53,21 @@ function PostsDetail() {
           <p>{post_to_be_detailed?.body}</p>
         </div>
 
-        <div>
-          <button className="cursor-pointer" onClick={handleCopy}>
-            {!isCopied ? "copy slug" : "slug copied"}
+        <div className="flex justify-between">
+          <button
+            className="cursor-pointer bg-gray-700 px-4 py-2 flex items-center gap-2 border border-gray-700 transition-all duration-200 ease-in capitalize text-gray-200 hover:border-gray-300 hover:border"
+            onClick={handleCopy}
+          >
+            <MdContentCopy />
+            {!isCopied ? "copy slug" : "copied!"}
           </button>
-          <Link to="/posts">back to posts</Link>
+          <Link
+            className="cursor-pointer bg-blue-900 px-4 py-2 flex items-center gap-2 border border-gray-700 transition-all duration-200 ease-in text-gray-200 capitalize hover:border-gray-300 hover:border"
+            to="/posts"
+          >
+            <IoArrowBackOutline className="" />
+            <p>back to posts</p>
+          </Link>
         </div>
       </article>
     </div>
