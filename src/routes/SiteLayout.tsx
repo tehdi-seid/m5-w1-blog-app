@@ -1,10 +1,12 @@
 import React from "react";
 import MainNave from "../components/MainNave";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Footer from "../components/Footer";
 import ScrollTop from "../components/ScrollTop";
 
 function SiteLayout() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <div>
       <ScrollTop />
@@ -12,7 +14,7 @@ function SiteLayout() {
       <main>
         <Outlet />
       </main>
-      <Footer />
+      {!pathname.startsWith("/posts/") && <Footer />}
     </div>
   );
 }
