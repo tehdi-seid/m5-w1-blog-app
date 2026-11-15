@@ -1,4 +1,4 @@
-import { Link, Outlet, Route, Routes, createBrowserRouter } from "react-router";
+import { Route, Routes, createBrowserRouter } from "react-router";
 import SiteLayout from "./routes/SiteLayout";
 import Posts from "./routes/Posts";
 import HomePage from "./routes/HomePage";

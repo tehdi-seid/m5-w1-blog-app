@@ -14,7 +14,7 @@ function PostsDetail() {
   const [isCopied, serIsCopied] = useState(false);
   async function handleCopy() {
     if (!post_to_be_detailed?.slug) return;
-    await navigator.clipboard.writeText(post_to_be_detailed.slug);
+    await navigator.clipboard.writeText(post_to_be_detailed.body);
     serIsCopied(true);
 
     setTimeout(() => {
@@ -54,7 +54,7 @@ function PostsDetail() {
             onClick={handleCopy}
           >
             <MdContentCopy />
-            {!isCopied ? "copy slug" : "copied!"}
+            {!isCopied ? "copy" : "copied!"}
           </button>
           <Link
             className="cursor-pointer bg-blue-900 px-4 py-2 flex items-center gap-2 border border-gray-700 transition-all duration-200 ease-in text-gray-200 capitalize hover:border-gray-300 hover:border"
