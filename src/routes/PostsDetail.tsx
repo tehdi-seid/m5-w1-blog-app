@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { SlInfo } from "react-icons/sl";
+import { useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { useParams } from "react-router";
@@ -7,14 +6,10 @@ import { posts } from "../data/posts";
 import { LuClock } from "react-icons/lu";
 import { Link } from "react-router";
 const post = posts;
-function find_post(slug: string | undefined) {
-  if (slug) {
-    return post.find((pos) => pos.slug === slug);
-  }
-}
+
 function PostsDetail() {
   const params = useParams();
-  const post_to_be_detailed = find_post(params.slug);
+  const post_to_be_detailed = post.find((pos) => pos.slug === params.slug);
 
   const [isCopied, serIsCopied] = useState(false);
   async function handleCopy() {
@@ -28,7 +23,7 @@ function PostsDetail() {
   }
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gray-950">
-      <article className="border max-w-[min(100%,800px)] p-7 flex flex-col gap-4">
+      <article className="border max-w-[min(100%,800px)] p-7 flex flex-col gap-4 border-gray-600 mx-[5%]">
         <div className="flex items-center justify-end gap-2">
           <p>
             <LuClock />
@@ -36,7 +31,7 @@ function PostsDetail() {
           <p>{post_to_be_detailed?.publishedAt}</p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           <h5 className="text-3xl font-semibold text-gray-300">
             {post_to_be_detailed?.excerpt}
           </h5>

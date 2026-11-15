@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
 import { posts } from "../data/posts";
+import { VscAddSmall } from "react-icons/vsc";
 import PostCard from "../components/PostCard";
 function HomePage() {
   const latest_posts = posts.slice(1, 5);
   return (
-    <section className="mt-20 relative mx-[5%] my-5">
+    <section className="mt-30 relative mx-[5%] my-5">
       <div className="relative flex flex-col gap-20 items-center">
         <h1 className="text-6xl font-bold text-[hsla(242,100%,70%)]">
           Learn Build Grow
@@ -51,6 +52,9 @@ function HomePage() {
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
+      </div>
+      <div className="fixed bottom-20 z-100 right-20 w-15 h-15 border flex justify-center items-center rounded-full bg-blue-950 border-blue-900 text-gray-100">
+        <VscAddSmall className="text-3xl" />
       </div>
     </section>
   );

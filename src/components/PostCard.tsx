@@ -1,5 +1,4 @@
-import React from "react";
-import { posts, type Post } from "../data/posts";
+import { type Post } from "../data/posts";
 import { Link } from "react-router";
 import { MdOutlineDateRange } from "react-icons/md";
 
@@ -23,7 +22,7 @@ function PostCard({ post }: { post: Post }) {
         ))}
       </div>
       <Link
-        className="text-blue-500 capitalize hover:translate-x-2  duration-300 ease-in text-right transition-transform "
+        className="text-blue-500 capitalize hover:translate-x-2 duration-300 ease-in self-end w-max transition-transform"
         to={`/posts/${post.slug}`}
       >
         read article →
