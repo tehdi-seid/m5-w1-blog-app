@@ -2,12 +2,16 @@ import React from "react";
 import PostCard from "../components/PostCard";
 import { posts } from "../data/posts";
 import SearchForm from "../components/SearchForm";
+import Filter from "../components/Filter";
 
 function Posts() {
   const post = posts;
   return (
     <div className="my-20 mx-[5%]">
-      <SearchForm />
+      <div className="flex">
+        <SearchForm />
+        <Filter />
+      </div>
       <div>
         {" "}
         <h1 className="text-2xl font-semibold text-center py-3 ">Posts</h1>
