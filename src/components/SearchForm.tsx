@@ -10,9 +10,9 @@ function SearchForm() {
         placeholder="Search"
       />
 
-      <div className="absolute right-0 top-1/2 rounded-r-4xl -translate-y-1/2 h-full bg-gray-700 flex justify-center items-center px-5">
+      <button className="absolute right-0 top-1/2 rounded-r-4xl -translate-y-1/2 h-full bg-gray-700 flex justify-center items-center px-5 text-xl cursor-pointer">
         <FaMagnifyingGlass />
-      </div>
+      </button>
     </form>
   );
 }
